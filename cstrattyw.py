@@ -2,8 +2,7 @@ import discord
 import random
 from enemyinfo import enemyhealth
 
-def runBot():
-	discord_token = 'redacted_token'
+def runBot(discord_token: str):
 	client = discord.Client(intents=discord.Intents.default())
 
 	@client.event

@@ -1,0 +1,582 @@
+{
+    "hornoad": {
+        "health": 4
+    },
+    "halzyn": {
+        "health": 4
+    },
+    "wall pirate": {
+        "aliases": [
+          "clinging pirate"
+        ],
+        "health": 6
+    },
+    "moto": {
+        "health": 6
+    },
+    "yameba": {
+        "aliases": [
+          "bubble"
+        ],
+        "health": 2
+    },
+    "kago": {
+        "health": 5
+    },
+    "samus eater bud": {
+        "aliases": [
+          "samus eater spore",
+          "spore spawner"
+        ],
+        "health": 1
+    },
+    "samus eater": {
+        "aliases": [
+          "nettori plant"
+        ],
+        "health": 1
+    },
+    "geron stabilizer": {
+        "aliases": [
+          "stabilizer",
+          "stabilizer geron"
+        ],
+        "health": 21
+    },
+    "zeela": {
+        "aliases": [
+          "green zeela",
+          "blue zeela"
+        ],
+        "health": 8
+    },
+    "zombie researcher": {
+        "aliases": [
+          "zombie",
+          "researcher"
+        ],
+        "health": 2
+    },
+    "geemer": {
+        "health": 4
+    },
+    "arachnus": {
+        "aliases": [
+          "marukara",
+          "armadillo",
+          "mole"
+        ],
+        "children": [
+          "arachnus core"
+        ],
+        "health": 150
+    },
+    "waver": {
+        "health": 12
+    },
+    "sciser": {
+        "aliases": [
+          "crab"
+        ],
+        "health": 8
+    },
+    "gold sciser": {
+        "aliases": [
+          "golden scizer",
+          "gold crab",
+          "golden crab"
+        ],
+        "health": 16
+    },
+    "sidehopper": {
+        "aliases": [
+          "side hopper"
+        ],
+        "health": 24
+    },
+    "dessgeega": {
+        "health": 14
+    },
+    "green geron": {
+        "aliases": [
+          "missile geron"
+        ],
+        "health": 30
+    },
+    "zazabi": {
+        "aliases": [
+          "condom"
+        ],
+        "children": [
+          "zazabi core"
+        ],
+        "description": "Zazabi will always take 10 hits, regardless of weapon.",
+        "health": 100
+    },
+    "yakuza phase 1": {
+        "aliases": [
+          "yakuza",
+          "spider",
+          "gedo"
+        ],
+        "children": [
+          "yakuza phase 2",
+          "yakuza core"
+        ],
+        "health": 500
+    },
+    "yakuza phase 2": {
+      "aliases": [
+        "yakuza 2nd phase",
+        "yakuza second phase",
+        "yakuza 2",
+        "yakuza sj phase",
+        "yakuza space jump phase"
+      ],
+      "health": 500
+    },
+    "nettori": {
+        "aliases": [
+          "plant boss",
+          "chozo statue"
+        ],
+        "children": [
+          "plasma core"
+        ],
+        "health": 2000
+    },
+    "zoro": {
+        "aliases": [
+          "red zoro"
+        ],
+        "health": 16
+    },
+    "kihunter": {
+        "aliases": [
+          "ki hunter"
+        ],
+        "health": 40
+    },
+    "reo": {
+        "health": 10
+    },
+    "namihe": {
+        "health": 82
+    },
+    "fune": {
+        "health": 32
+    },
+    "blue zoro": {
+        "aliases": [
+          "stronger zoro"
+        ],
+        "health": 120
+    },
+    "geruda": {
+        "health": 12
+    },
+    "big skultera": {
+        "aliases": [
+          "big skulltera",
+          "large skultera",
+          "large skulltera",
+          "big fish",
+          "large fish"
+        ],
+        "health": 28
+    },
+    "skultera": {
+        "aliases": [
+          "skulltera",
+          "fish"
+        ],
+        "health": 12
+    },
+    "nova": {
+        "aliases": [
+          "sova"
+        ],
+        "health": 10
+    },
+    "yard": {
+        "aliases": [
+          "snail"
+        ],
+        "health": 60
+    },
+    "evir": {
+        "health": 80
+    },
+    "bull": {
+        "aliases": [
+          "puffer",
+          "preed"
+        ],
+        "health": 18
+    },
+    "menu": {
+        "aliases": [
+          "memu",
+          "owl"
+        ],
+        "health": 6
+    },
+    "gerubus": {
+        "health": 45
+    },
+    "choot": {
+        "aliases": [
+          "chute leech",
+          "pancake"
+        ],
+        "health": 16
+    },
+    "walking pirate": {
+        "aliases": [
+          "standing pirate"
+        ],
+        "health": 90
+    },
+    "purple geron": {
+        "aliases": [
+          "super missile geron",
+          "sm geron"
+        ],
+        "health": 90
+    },
+    "teal geron": {
+        "aliases": [
+          "power bomb geron",
+          "pb geron"
+        ],
+        "health": 17
+    },
+    "ripper": {
+        "aliases": [
+          "that one bug that looks like a croissant that you can freeze and use as a platform",
+          "croissant"
+        ],
+
+        "health": 1
+    },
+    "gold pirate": {
+        "aliases": [
+          "golden pirate"
+        ],
+        "health": 135
+    },
+    "pink zeela": {
+        "aliases": [
+          "purple zeela",
+          "stronger zeela"
+        ],
+        "health": 82
+    },
+    "owtch": {
+        "aliases": [
+          "spiny"
+        ],
+        "health": 10
+    },
+    "serris": {
+        "aliases": [
+          "ishtar"
+        ],
+        "children": [
+          "serris core"
+        ],
+        "health": 50
+    },
+    "genesis": {
+        "aliases": [
+          "spitter"
+        ],
+        "health": 60
+    },
+    "puyo": {
+        "health": 4
+    },
+    "aqua pirate": {
+        "aliases": [
+          "swimming pirate"
+        ],
+        "health": 90
+    },
+    "powamp": {
+        "health": 1
+    },
+    "zozoro": {
+        "aliases": [
+          "sandwich"
+        ],
+        "health": 8
+    },
+    "sa-x phase 1": {
+      "aliases": [
+        "sax",
+        "sa-x",
+        "sax 1st phase",
+        "sa-x 1st phase",
+        "sax first phase",
+        "sa-x first phase",
+        "sax phase 1",
+        "sax 1",
+        "sa-x phase 2"
+      ],
+      "children": [
+        "sa-x beast",
+        "ice core"
+      ],
+      "health": 350
+    },
+    "sa-x beast": {
+        "aliases": [
+          "sax beast",
+          "sa-x 2nd phase",
+          "sax 2nd phase",
+          "sa-x second phase",
+          "sax second phase",
+          "sa-x phase 2",
+          "sax phase 2",
+          "sax 2",
+          "sa-x 2"
+        ],
+        "health": 600
+    },
+    "omega metroid": {
+        "aliases": [
+          "final boss"
+        ],
+        "health": 1200
+    },
+    "ridley": {
+        "aliases": [
+          "screeee"
+        ],
+        "health": 4500
+    },
+  "nightmare gravity manipulator": {
+      "aliases": [
+        "nightmare capsule",
+        "nightmare 1st phase",
+        "nightmare first phase",
+        "nightmare phase 1",
+        "nightmare gravity",
+        "nightmare lower"
+      ],
+      "children": [
+          "nightmare",
+          "nightmare core"
+        ],
+      "health": 600
+    },
+    "nightmare": {
+        "alises": [
+          "nightmare 2nd phase",
+          "nightmare second phase",
+          "nightmare phase 2"
+        ],
+        "health": 1200
+    },
+    "varia core": {
+        "aliases": [
+          "barrier core",
+          "barrier core-x",
+          "mega core",
+          "mega core-x",
+          "varia core-x"
+        ],
+        "children": [
+          "varia core core-x"
+        ],
+        "health": 100
+    },
+    "box": {
+        "aliases": [
+          "b.o.x.",
+          "box 1"
+        ],
+        "health": 300
+    },
+    "xbox": {
+        "aliases": [
+          "x-b.o.x.",
+          "box 2"
+        ],
+        "children": [
+          "wave core"
+        ],
+        "health": 500
+    },
+    "arachnus core": {
+        "aliases": [
+          "arachnus core-x",
+          "marukara core",
+          "marukara core-x"
+        ],
+        "health": 30
+    },
+    "charge core": {
+        "aliases": [
+          "charge core-x",
+          "charge beam core-x",
+          "charge beam core",
+          "fake chozo statue"
+        ],
+        "health": 33
+    },
+    "gadora": {
+        "aliases": [
+          "eyedoor",
+          "eye door"
+        ],
+        "health": 24
+    },
+    "ice core": {
+        "aliases": [
+          "ice core-x",
+          "ice beam core",
+          "ice beam core-x",
+          "sax core",
+          "sax core-x",
+          "sa-x core",
+          "sa-x core-x"
+        ],
+        "health": 270
+    },
+    "plasma core": {
+        "aliases": [
+          "plasma core-x",
+          "plasma beam core",
+          "plasma beam core-x",
+          "nettori core",
+          "nettori core-x",
+          "plant boss core",
+          "plant boss core-x",
+          "chozo statue core",
+          "chozo statue core-x"
+        ],
+        "health": 200
+    },
+    "wave core": {
+        "aliases": [
+          "wave core-x",
+          "wave beam core",
+          "wave beam core-x",
+          "xbox core",
+          "xbox core-x",
+          "box 2 core",
+          "box 2 core-x"
+        ],
+        "health": 180
+    },
+    "zazabi core": {
+        "aliases": [
+          "zazabi core-x",
+          "hj core",
+          "hj core-x",
+          "hijump core",
+          "hijump core-x",
+          "hi-jump core",
+          "hi-jump core-x",
+          "highjump core",
+          "highjump core-x",
+          "high jump core",
+          "high jump core-x"
+        ],
+        "health": 40
+    },
+    "serris core": {
+        "aliases": [
+          "serris core-x",
+          "ishtar core",
+          "ishtar core-x",
+          "speed core",
+          "speed core-x",
+          "speedbooster core",
+          "speedbooster core-x",
+          "speed booster core",
+          "speed booster core-x"
+        ],
+        "health": 50
+    },
+    "wide core": {
+        "aliases": [
+          "wide core-x",
+          "wide beam core",
+          "wide beam core-x",
+          "scientist",
+          "scientist core",
+          "scientist core-x",
+          "gary",
+          "gary core",
+          "gary core-x"
+        ],
+        "health": 160
+    },
+    "yakuza core": {
+        "aliases": [
+          "yakuza core-x",
+          "spider core",
+          "spider core-x",
+          "gedo core",
+          "gedo core-x",
+          "sj core",
+          "sj core-x",
+          "space jump core",
+          "space jump core-x"
+        ],
+        "health": 240
+    },
+    "varia core core-x": {
+        "aliases": [
+          "varia core core",
+          "varia core-x core",
+          "varia core-x core-x",
+          "barrier core core",
+          "barrier core core-x",
+          "barrier core-x core",
+          "barrier core-x core-x",
+          "mega core core",
+          "mega core core-x",
+          "mega core-x core",
+          "mega core-x core-x",
+          "varia suit core",
+          "varia suit core-x"
+        ],
+        "health": 180
+    },
+    "nightmare core": {
+        "aliases": [
+          "nightmare core-x"
+        ],
+        "health": 240
+    },
+    "ridley core": {
+        "aliases": [
+          "ridley core-x",
+          "screw core",
+          "screw core-x",
+          "sa core",
+          "sa core-x",
+          "screw attack core",
+          "screw attacck ore-x"
+        ],
+        "health": 270
+    },
+    "energy tank mimic": {
+        "aliases": [
+          "e mimic",
+          "energy tank mimic",
+          "etank mimic",
+          "e-tank mimic"
+        ],
+        "health": 1
+    },
+    "missile tank mimic": {
+        "aliases": [
+          "missile mimic"
+        ],
+        "health": 1
+    }
+}

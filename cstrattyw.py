@@ -1,3 +1,4 @@
+import json
 from datetime import datetime, timedelta
 from typing import Mapping, Optional, List, Any
 
@@ -5,8 +6,6 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import Cog, Command
 from discord.ext.commands.context import Context
-
-from enemyinfo import enemyhealth
 
 
 class CustomHelpCommand(commands.HelpCommand):
@@ -124,13 +123,65 @@ def run_bot(discord_token: str):
 
         await ctx.send(f"A {old_time} on Nintendo Switch is equivalent to a {new_time} on original hardware")
 
+    def find_enemy(enemy_name: str) -> tuple[str, dict]:
+        with open("enemy_info.json", "r") as f:
+            enemy_info = json.load(f)
+
+        for enemy, info in enemy_info.items():
+            valid_names = [enemy] + info.get("aliases", [])
+
+            if enemy_name in valid_names:
+                return enemy, info
+
+        return "", {}
+
+    def get_all_enemies() -> dict[str, dict]:
+        with open("enemy_info.json", "r") as f:
+            return json.load(f)
+
+    def find_related_enemies(base_enemy: str) -> list[tuple[str, dict]]:
+        parent_name, parent_info = find_enemy(base_enemy)
+
+        if not parent_name:
+            return []
+
+        enemies = []
+        has_children = "children" in parent_info
+        if not has_children:
+            # If it doesn't have children defined, check if it has a parent
+            for enemy_name, enemy_info in get_all_enemies().items():
+                if parent_name not in enemy_info.get("children", []):
+                    continue
+
+                parent_name = enemy_name
+                parent_info = enemy_info
+                break
+
+        enemies.append((parent_name, parent_info))
+        for child in parent_info.get("children", []):
+            child_name, child_info = find_enemy(child)
+            if not child_name:
+                raise ValueError(f"Error: Cannot find data for {child}!!!")
+
+            enemies.append((child_name, child_info))
+
+        return enemies
+
     @client.command()
-    async def enemy(ctx: Context, *, message=""):
+    async def hp(ctx: Context, *, message=""):
         """
         for the health of an enemy [(list of enemy names)](<https://docs.google.com/spreadsheets/d/1S7UH4Mo8BPfYlp39hxPVUth-IQzjBVaxVK0oC8qWOvA/edit?usp=sharing>)
         """
         enemy_name = message.lower()
-        await ctx.send(f"{enemy_name.title()} has {str(enemyhealth.get(enemy_name))} health")
+
+        enemies = find_related_enemies(enemy_name)
+
+        message = ""
+        for enemy_name, enemy_info in enemies:
+            additional_desc = f" {enemy_info["description"]}" if "description" in enemy_info else ""
+            message += f"{enemy_name.title()} has {str(enemy_info["health"])} health.{additional_desc}\n"
+
+        await ctx.send(message)
 
     @client.command(ignore_extra=False)
     async def damage(ctx: Context):

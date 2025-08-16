@@ -129,7 +129,7 @@ def run_bot(discord_token: str):
         """
         for the health of an enemy [(list of enemy names)](<https://docs.google.com/spreadsheets/d/1S7UH4Mo8BPfYlp39hxPVUth-IQzjBVaxVK0oC8qWOvA/edit?usp=sharing>)
         """
-        enemy_name = message.lower().split(" ", 1)[1]
+        enemy_name = message.lower()
         await ctx.send(f"{enemy_name.title()} has {str(enemyhealth.get(enemy_name))} health")
 
     @client.command(ignore_extra=False)

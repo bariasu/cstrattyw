@@ -117,7 +117,7 @@ def run_bot(discord_token: str):
             # that as int.
             microseconds = int(str(round(float(f"0.{delta.microseconds}"), 2)).split(".")[1])
 
-            return f"{hours:02d}:{minutes:02d}:{seconds:02d}.{microseconds:02d}"
+            return f"{hours:02d}:{minutes:02d}:{seconds:02d}.{microseconds:<02d}"
 
         old_time = timedelta_to_string(original_delta)
         new_time = timedelta_to_string(new_delta)

@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta
 from typing import Mapping, Optional, List, Any
 
 import discord
@@ -90,12 +91,38 @@ def run_bot(discord_token: str):
                        "[Japanese Skip Loading Fanfare Patch](<https://www.speedrun.com/fusion/resources/mbqvq>)\n")
 
     @client.command(ignore_extra=False)
-    async def nso(ctx: Context):
+    async def nso(ctx: Context, timestamp_as_str: str):
         """
-        for converting NSO runs
+        for converting NSO runs. Usage is <hour>:<minutes>:<seconds>.<milliseconds> (milliseconds optional)
         """
-        await ctx.send('[Converter for NSO runs](<https://nudua.com/convert>) | '
-                       'Enter **60** in "Source" and **59.7275** in "To"')
+
+        if "." not in timestamp_as_str:
+            timestamp_as_str += ".0"
+
+        date = datetime.strptime(timestamp_as_str, "%H:%M:%S.%f").time()
+        original_delta = timedelta(hours=date.hour, minutes=date.minute, seconds=date.second,
+                                   microseconds=date.microsecond)
+        multiplier = (60 / 59.7275)
+        new_delta = original_delta * multiplier
+
+        def timedelta_to_string(delta: timedelta) -> str:
+            days, seconds = delta.days, delta.seconds
+            hours = days * 24 + seconds // 3600
+            minutes = (seconds % 3600) // 60
+            seconds = seconds % 60
+
+            # This is convoluted, surely there's a better way?
+            # We want to round microseconds. But since those are ints (e.g. 96738), we string-convert them to a float,
+            # round them there, string convert them again to get the part past decimal, and then finally convert
+            # that as int.
+            microseconds = int(str(round(float(f"0.{delta.microseconds}"), 2)).split(".")[1])
+
+            return f"{hours:02d}:{minutes:02d}:{seconds:02d}.{microseconds:02d}"
+
+        old_time = timedelta_to_string(original_delta)
+        new_time = timedelta_to_string(new_delta)
+
+        await ctx.send(f"A {old_time} on Nintendo Switch is equivalent to a {new_time} on original hardware")
 
     @client.command()
     async def enemy(ctx: Context, *, message=""):

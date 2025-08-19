@@ -1,8 +1,10 @@
+import io
 import json
 from datetime import datetime, timedelta
 from typing import Mapping, Optional, List, Any
 
 import discord
+from discord import Message, Interaction
 from discord.ext import commands
 from discord.ext.commands import Cog, Command
 from discord.ext.commands.context import Context
@@ -33,6 +35,65 @@ def run_bot(discord_token: str):
     @client.event
     async def on_ready():
         print({client.user}, 'is live')
+
+    @client.event
+    async def on_message(message: Message):
+        if message.author.bot:
+            return
+
+        await react_to_mfor_spoiler_logs_if_exists(message)
+        await client.process_commands(message)
+
+    async def react_to_mfor_spoiler_logs_if_exists(message: Message):
+        if len(message.attachments) > 1:
+            return
+
+        for attachment in message.attachments:
+            if not attachment.filename.endswith(".json"):
+                continue
+
+            spoiler_text = await attachment.read()
+            spoiler = json.load(io.BytesIO(spoiler_text))
+
+            embed = discord.Embed()
+            embed.colour = discord.Colour.blue()
+            embed.title = "MFOR Spoiler File"
+            embed.description = f"Generated on {spoiler["MFOR Version"]} with Seed `{spoiler["Seed"]}`"
+            field_text = ""
+            field_header = f"**Logic Settings**"
+            for key, value in spoiler["Settings"].items():
+                if key in ["E-Tanks", "Missile Tanks", "Power Bomb Tanks"]:
+                    continue
+
+                field_text += f"{key}: {value}\n"
+            field_text = field_text.strip()
+            embed.add_field(name=field_header, value=field_text)
+
+            gen_button_spoilered = discord.ui.Button(label="Show Item Order (Spoilered)")
+            gen_button_revealed = discord.ui.Button(label="Show Item Order (Revealed)")
+
+            async def reply_with_gen_order(interaction: Interaction, spoilered: bool):
+                msg = "Item Order:\n"
+                spoiler_char = "||" if spoilered else ""
+                for index, (key, value) in enumerate(spoiler["Item order"].items()):
+                    msg += f"{index}. {spoiler_char}{value} at {key}{spoiler_char}\n"
+                msg = msg.strip()
+                await interaction.response.send_message(msg)
+
+            async def button_spoilered_callback(interaction: Interaction):
+                await reply_with_gen_order(interaction, True)
+
+            async def button_revealed_callback(interaction: Interaction):
+                await reply_with_gen_order(interaction, False)
+
+            gen_button_spoilered.callback = button_spoilered_callback
+            gen_button_revealed.callback = button_revealed_callback
+
+            view = discord.ui.View()
+            view.add_item(gen_button_spoilered)
+            view.add_item(gen_button_revealed)
+
+            await message.reply(embed=embed, view=view, mention_author=False)
 
     @client.command()
     async def add(ctx: Context, *, message: str):

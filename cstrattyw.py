@@ -48,6 +48,8 @@ def run_bot(discord_token: str):
 
         await react_to_mfor_spoiler_logs_if_exists(message)
         await react_to_mfor_bps_file_if_exists(message)
+        await react_to_your_rat_pbs(message)
+
         await client.process_commands(message)
 
     async def react_to_mfor_spoiler_logs_if_exists(message: Message):
@@ -296,6 +298,16 @@ def run_bot(discord_token: str):
             embed.add_field(name=logic_settings_header, value=logic_settings_text)
             embed.add_field(name=palette_shuffle_header, value=palette_shuffle_text)
             await message.reply(embed=embed, mention_author=False)
+
+    async def react_to_your_rat_pbs(message: Message):
+        if message.channel.name != "pb-brag":
+            return
+
+        if message.content != "YOUR RAT" or len(message.attachments) == 0:
+            return
+
+        await message.add_reaction(message.guild.get_emoji(1407560417932214352))  # Your Rat
+        await message.channel.send("YOUR RAT")
 
     @client.command()
     async def add(ctx: Context, *, message: str):

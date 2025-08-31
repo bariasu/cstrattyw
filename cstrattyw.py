@@ -5,7 +5,7 @@ from typing import Mapping, Optional, List, Any
 
 import discord
 import mars_patcher.constants.game_data as mars_game_data
-from discord import Message, Interaction
+from discord import Message, Interaction, User, RawReactionActionEvent, PartialEmoji
 from discord.ext import commands
 from discord.ext.commands import Cog, Command
 from discord.ext.commands.context import Context
@@ -33,6 +33,8 @@ class CustomHelpCommand(commands.HelpCommand):
 def run_bot(discord_token: str):
     intents = discord.Intents.default()
     intents.message_content = True
+    intents.reactions = True
+    intents.members = True
 
     client = commands.Bot(command_prefix=commands.when_mentioned_or("!"), intents=intents,
                           help_command=CustomHelpCommand())
@@ -40,6 +42,28 @@ def run_bot(discord_token: str):
     @client.event
     async def on_ready():
         print({client.user}, 'is live')
+
+    @client.event
+    async def on_raw_reaction_add(payload: RawReactionActionEvent):
+        user = await client.fetch_user(payload.user_id)
+
+        if user.bot:
+            return
+
+        message = await client.get_channel(payload.channel_id).fetch_message(payload.message_id)
+
+        await act_with_role_on_react(payload.emoji, user, message, False)
+
+    @client.event
+    async def on_raw_reaction_remove(payload: RawReactionActionEvent):
+        user = await client.fetch_user(payload.user_id)
+
+        if user.bot:
+            return
+
+        message = await client.get_channel(payload.channel_id).fetch_message(payload.message_id)
+
+        await act_with_role_on_react(payload.emoji, user, message, True)
 
     @client.event
     async def on_message(message: Message):
@@ -51,6 +75,29 @@ def run_bot(discord_token: str):
         await react_to_your_rat_pbs(message)
 
         await client.process_commands(message)
+
+    async def act_with_role_on_react(reaction: PartialEmoji, user: User, message: Message, remove: bool):
+        if message.id != 1411451852003868913:  # roles channel
+            return
+
+        with open("role_reaction_mappings.json", "r") as f:
+            role_reaction_mappings = json.load(f)
+
+        message_id_str = str(message.id)
+        if str(message_id_str) not in role_reaction_mappings:
+            return
+
+        role_str = role_reaction_mappings[message_id_str].get(str(reaction))
+        if not role_str:
+            return
+
+        role = await message.guild.fetch_role(role_str)
+        member = await message.guild.fetch_member(user.id)
+
+        if remove:
+            await member.remove_roles(role)
+        else:
+            await member.add_roles(role)
 
     async def react_to_mfor_spoiler_logs_if_exists(message: Message):
         if len(message.attachments) > 1:

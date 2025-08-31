@@ -77,14 +77,14 @@ def run_bot(discord_token: str):
         await client.process_commands(message)
 
     async def act_with_role_on_react(reaction: PartialEmoji, user: User, message: Message, remove: bool):
-        if message.id != 1411451852003868913:  # roles channel
+        if message.channel.id != 1411451852003868913:  # roles channel
             return
 
         with open("role_reaction_mappings.json", "r") as f:
             role_reaction_mappings = json.load(f)
 
         message_id_str = str(message.id)
-        if str(message_id_str) not in role_reaction_mappings:
+        if message_id_str not in role_reaction_mappings:
             return
 
         role_str = role_reaction_mappings[message_id_str].get(str(reaction))

@@ -1,582 +1,951 @@
 {
     "hornoad": {
-        "health": 4
+        "health": 4,
+        "x_chances": {
+            "yellow": 0.8037,
+            "green": 0.1953,
+            "red": 0.001
+        }
     },
     "halzyn": {
-        "health": 4
+        "health": 4,
+        "x_chances": {
+            "yellow": 0.7148,
+            "green": 0.293,
+            "red": 0.001
+        }
     },
     "wall pirate": {
         "aliases": [
-          "clinging pirate"
+            "clinging pirate"
         ],
-        "health": 6
+        "health": 6,
+        "x_chances": {
+            "yellow": 0.6973,
+            "green": 0.293,
+            "red": 0.0098
+        }
     },
     "moto": {
-        "health": 6
+        "health": 6,
+        "x_chances": {
+            "yellow": 0.7061,
+            "green": 0.293,
+            "red": 0.001
+        }
     },
     "yameba": {
         "aliases": [
-          "bubble"
+            "bubble"
         ],
-        "health": 2
+        "health": 2,
+        "x_chances": {
+            "yellow": 0.8037,
+            "green": 0.1953,
+            "red": 0.001
+        }
     },
     "kago": {
-        "health": 5
+        "health": 5,
+        "x_chances": {
+            "yellow": 0.4141,
+            "green": 0.293,
+            "red": 0.293
+        }
     },
     "samus eater bud": {
         "aliases": [
-          "samus eater spore",
-          "spore spawner"
+            "samus eater spore",
+            "spore spawner"
         ],
-        "health": 1
+        "health": 1,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "samus eater": {
         "aliases": [
-          "nettori plant"
+            "nettori plant"
         ],
-        "health": 1
+        "health": 1,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "geron stabilizer": {
         "aliases": [
-          "stabilizer",
-          "stabilizer geron"
+            "stabilizer",
+            "stabilizer geron"
         ],
-        "health": 21
+        "health": 21,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 1.0,
+            "red": 0.0
+        }
     },
     "zeela": {
         "aliases": [
-          "green zeela",
-          "blue zeela"
+            "green zeela",
+            "blue zeela"
         ],
-        "health": 8
+        "health": 8,
+        "x_chances": {
+            "yellow": 0.8037,
+            "green": 0.1953,
+            "red": 0.001
+        }
     },
     "zombie researcher": {
         "aliases": [
-          "zombie",
-          "researcher"
+            "zombie",
+            "researcher"
         ],
-        "health": 2
+        "health": 2,
+        "x_chances": {
+            "yellow": 0.5107,
+            "green": 0.4883,
+            "red": 0.001
+        }
     },
     "geemer": {
-        "health": 4
+        "health": 4,
+        "x_chances": {
+            "yellow": 0.9883,
+            "green": 0.0098,
+            "red": 0.002
+        }
     },
     "arachnus": {
         "aliases": [
-          "marukara",
-          "armadillo",
-          "mole"
+            "marukara",
+            "armadillo",
+            "mole"
         ],
         "children": [
-          "arachnus core"
+            "arachnus core"
         ],
-        "health": 150
+        "health": 150,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "waver": {
-        "health": 12
+        "health": 12,
+        "x_chances": {
+            "yellow": 0.7549,
+            "green": 0.2441,
+            "red": 0.001
+        }
     },
     "sciser": {
         "aliases": [
-          "crab"
+            "crab"
         ],
-        "health": 8
+        "health": 8,
+        "x_chances": {
+            "yellow": 0.8037,
+            "green": 0.1953,
+            "red": 0.001
+        }
     },
     "gold sciser": {
         "aliases": [
-          "golden scizer",
-          "gold crab",
-          "golden crab"
+            "golden scizer",
+            "gold crab",
+            "golden crab"
         ],
-        "health": 16
+        "health": 16,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "sidehopper": {
         "aliases": [
-          "side hopper"
+            "side hopper"
         ],
-        "health": 24
+        "health": 24,
+        "x_chances": {
+            "yellow": 0.5107,
+            "green": 0.4883,
+            "red": 0.001
+        }
     },
     "dessgeega": {
-        "health": 14
+        "health": 14,
+        "x_chances": {
+            "yellow": 0.7832,
+            "green": 0.2148,
+            "red": 0.002
+        }
     },
     "green geron": {
         "aliases": [
-          "missile geron"
+            "missile geron"
         ],
-        "health": 30
+        "health": 30,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 1.0,
+            "red": 0.0
+        }
     },
     "zazabi": {
         "aliases": [
-          "condom"
+            "condom"
         ],
         "children": [
-          "zazabi core"
+            "zazabi core"
         ],
         "description": "Zazabi will always take 10 hits, regardless of weapon.",
-        "health": 100
+        "health": 100,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "yakuza phase 1": {
         "aliases": [
-          "yakuza",
-          "spider",
-          "gedo"
+            "yakuza",
+            "spider",
+            "gedo"
         ],
         "children": [
-          "yakuza phase 2",
-          "yakuza core"
+            "yakuza phase 2",
+            "yakuza core"
         ],
-        "health": 500
+        "health": 500,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "yakuza phase 2": {
-      "aliases": [
-        "yakuza 2nd phase",
-        "yakuza second phase",
-        "yakuza 2",
-        "yakuza sj phase",
-        "yakuza space jump phase"
-      ],
-      "health": 500
+        "aliases": [
+            "yakuza 2nd phase",
+            "yakuza second phase",
+            "yakuza 2",
+            "yakuza sj phase",
+            "yakuza space jump phase"
+        ],
+        "health": 500
     },
     "nettori": {
         "aliases": [
-          "plant boss",
-          "chozo statue"
+            "plant boss",
+            "chozo statue"
         ],
         "children": [
-          "plasma core"
+            "plasma core"
         ],
-        "health": 2000
+        "health": 2000,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "zoro": {
         "aliases": [
-          "red zoro"
+            "red zoro"
         ],
-        "health": 16
+        "health": 16,
+        "x_chances": {
+            "yellow": 0.7549,
+            "green": 0.2441,
+            "red": 0.001
+        }
     },
     "kihunter": {
         "aliases": [
-          "ki hunter"
+            "ki hunter"
         ],
-        "health": 40
+        "health": 40,
+        "x_chances": {
+            "yellow": 0.8037,
+            "green": 0.1953,
+            "red": 0.001
+        }
     },
     "reo": {
-        "health": 10
+        "health": 10,
+        "x_chances": {
+            "yellow": 0.8525,
+            "green": 0.1465,
+            "red": 0.001
+        }
     },
     "namihe": {
-        "health": 82
+        "health": 82,
+        "x_chances": {
+            "yellow": 0.7041,
+            "green": 0.293,
+            "red": 0.0029
+        }
     },
     "fune": {
-        "health": 32
+        "health": 32,
+        "x_chances": {
+            "yellow": 0.7061,
+            "green": 0.293,
+            "red": 0.001
+        }
     },
     "blue zoro": {
         "aliases": [
-          "stronger zoro"
+            "stronger zoro"
         ],
-        "health": 120
+        "health": 120,
+        "x_chances": {
+            "yellow": 0.0977,
+            "green": 0.1211,
+            "red": 0.7813
+        }
     },
     "geruda": {
-        "health": 12
+        "health": 12,
+        "x_chances": {
+            "yellow": 0.8037,
+            "green": 0.1953,
+            "red": 0.001
+        }
     },
     "big skultera": {
         "aliases": [
-          "big skulltera",
-          "large skultera",
-          "large skulltera",
-          "big fish",
-          "large fish"
+            "big skulltera",
+            "large skultera",
+            "large skulltera",
+            "big fish",
+            "large fish"
         ],
-        "health": 28
+        "health": 28,
+        "x_chances": {
+            "yellow": 0.4883,
+            "green": 0.4883,
+            "red": 0.0234
+        }
     },
     "skultera": {
         "aliases": [
-          "skulltera",
-          "fish"
+            "skulltera",
+            "fish"
         ],
-        "health": 12
+        "health": 12,
+        "x_chances": {
+            "yellow": 0.8037,
+            "green": 0.1953,
+            "red": 0.001
+        }
     },
     "nova": {
         "aliases": [
-          "sova"
+            "sova"
         ],
-        "health": 10
+        "health": 10,
+        "x_chances": {
+            "yellow": 0.9014,
+            "green": 0.0977,
+            "red": 0.001
+        }
     },
     "yard": {
         "aliases": [
-          "snail"
+            "snail"
         ],
-        "health": 60
+        "health": 60,
+        "x_chances": {
+            "yellow": 0.6074,
+            "green": 0.3906,
+            "red": 0.002
+        }
     },
     "evir": {
-        "health": 80
+        "health": 80,
+        "x_chances": {
+            "yellow": 0.5088,
+            "green": 0.4883,
+            "red": 0.0029
+        }
     },
     "bull": {
         "aliases": [
-          "puffer",
-          "preed"
+            "puffer",
+            "preed"
         ],
-        "health": 18
+        "health": 18,
+        "x_chances": {
+            "yellow": 0.8037,
+            "green": 0.1953,
+            "red": 0.001
+        }
     },
     "menu": {
         "aliases": [
-          "memu",
-          "owl"
+            "memu",
+            "owl"
         ],
-        "health": 6
+        "health": 6,
+        "x_chances": {
+            "yellow": 0.9014,
+            "green": 0.0977,
+            "red": 0.001
+        }
     },
     "gerubus": {
-        "health": 45
+        "health": 45,
+        "x_chances": {
+            "yellow": 0.6582,
+            "green": 0.293,
+            "red": 0.0488
+        }
     },
     "choot": {
         "aliases": [
-          "chute leech",
-          "pancake"
+            "chute leech",
+            "pancake"
         ],
-        "health": 16
+        "health": 16,
+        "x_chances": {
+            "yellow": 0.8037,
+            "green": 0.1953,
+            "red": 0.001
+        }
     },
     "walking pirate": {
         "aliases": [
-          "standing pirate"
+            "standing pirate"
         ],
-        "health": 90
+        "health": 90,
+        "x_chances": {
+            "yellow": 0.6973,
+            "green": 0.293,
+            "red": 0.0098
+        }
     },
     "purple geron": {
         "aliases": [
-          "super missile geron",
-          "sm geron"
+            "super missile geron",
+            "sm geron"
         ],
-        "health": 90
+        "health": 90,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 1.0,
+            "red": 0.0
+        }
     },
     "teal geron": {
         "aliases": [
-          "power bomb geron",
-          "pb geron"
+            "power bomb geron",
+            "pb geron"
         ],
-        "health": 17
+        "health": 17,
+        "x_chances": {
+            "yellow": 0.1953,
+            "green": 0.293,
+            "red": 0.5117
+        }
     },
     "ripper": {
         "aliases": [
-          "that one bug that looks like a croissant that you can freeze and use as a platform",
-          "croissant"
+            "that one bug that looks like a croissant that you can freeze and use as a platform",
+            "croissant"
         ],
-
-        "health": 1
+        "health": 1,
+        "x_chances": {
+            "yellow": 0.7754,
+            "green": 0.1953,
+            "red": 0.0293
+        }
     },
     "gold pirate": {
         "aliases": [
-          "golden pirate"
+            "golden pirate"
         ],
-        "health": 135
+        "health": 135,
+        "x_chances": {
+            "yellow": 0.4883,
+            "green": 0.4883,
+            "red": 0.0234
+        }
     },
     "pink zeela": {
         "aliases": [
-          "purple zeela",
-          "stronger zeela"
+            "purple zeela",
+            "stronger zeela"
         ],
-        "health": 82
+        "health": 82,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 1.0
+        }
     },
     "owtch": {
         "aliases": [
-          "spiny"
+            "spiny"
         ],
-        "health": 10
+        "health": 10,
+        "x_chances": {
+            "yellow": 0.8525,
+            "green": 0.1465,
+            "red": 0.001
+        }
     },
     "serris": {
         "aliases": [
-          "ishtar"
+            "ishtar"
         ],
         "children": [
-          "serris core"
+            "serris core"
         ],
-        "health": 50
+        "health": 50,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "genesis": {
         "aliases": [
-          "spitter"
+            "spitter"
         ],
-        "health": 60
+        "health": 60,
+        "x_chances": {
+            "yellow": 0.6973,
+            "green": 0.293,
+            "red": 0.0098
+        }
     },
     "puyo": {
-        "health": 4
+        "health": 4,
+        "x_chances": {
+            "yellow": 0.9014,
+            "green": 0.0977,
+            "red": 0.001
+        }
     },
     "aqua pirate": {
         "aliases": [
-          "swimming pirate"
+            "swimming pirate"
         ],
-        "health": 90
+        "health": 90,
+        "x_chances": {
+            "yellow": 0.6973,
+            "green": 0.293,
+            "red": 0.0098
+        }
     },
     "powamp": {
-        "health": 1
+        "health": 1,
+        "x_chances": {
+            "yellow": 0.7949,
+            "green": 0.1953,
+            "red": 0.0098
+        }
     },
     "zozoro": {
         "aliases": [
-          "sandwich"
+            "sandwich"
         ],
-        "health": 8
+        "health": 8,
+        "x_chances": {
+            "yellow": 0.7148,
+            "green": 0.293,
+            "red": 0.001
+        }
     },
     "sa-x phase 1": {
-      "aliases": [
-        "sax",
-        "sa-x",
-        "sax 1st phase",
-        "sa-x 1st phase",
-        "sax first phase",
-        "sa-x first phase",
-        "sax phase 1",
-        "sax 1",
-        "sa-x phase 2"
-      ],
-      "children": [
-        "sa-x beast",
-        "ice core"
-      ],
-      "health": 350
+        "aliases": [
+            "sax",
+            "sa-x",
+            "sax 1st phase",
+            "sa-x 1st phase",
+            "sax first phase",
+            "sa-x first phase",
+            "sax phase 1",
+            "sax 1",
+            "sa-x phase 2"
+        ],
+        "children": [
+            "sa-x beast",
+            "ice core"
+        ],
+        "health": 350
     },
     "sa-x beast": {
         "aliases": [
-          "sax beast",
-          "sa-x 2nd phase",
-          "sax 2nd phase",
-          "sa-x second phase",
-          "sax second phase",
-          "sa-x phase 2",
-          "sax phase 2",
-          "sax 2",
-          "sa-x 2"
+            "sax beast",
+            "sa-x 2nd phase",
+            "sax 2nd phase",
+            "sa-x second phase",
+            "sax second phase",
+            "sa-x phase 2",
+            "sax phase 2",
+            "sax 2",
+            "sa-x 2"
         ],
-        "health": 600
+        "health": 600,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "omega metroid": {
         "aliases": [
-          "final boss"
+            "final boss"
         ],
-        "health": 1200
+        "health": 1200,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "ridley": {
         "aliases": [
-          "screeee"
+            "screeee"
         ],
-        "health": 4500
+        "health": 4500,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
-  "nightmare gravity manipulator": {
-      "aliases": [
-        "nightmare capsule",
-        "nightmare 1st phase",
-        "nightmare first phase",
-        "nightmare phase 1",
-        "nightmare gravity",
-        "nightmare lower"
-      ],
-      "children": [
-          "nightmare",
-          "nightmare core"
+    "nightmare gravity manipulator": {
+        "aliases": [
+            "nightmare capsule",
+            "nightmare 1st phase",
+            "nightmare first phase",
+            "nightmare phase 1",
+            "nightmare gravity",
+            "nightmare lower"
         ],
-      "health": 600
+        "children": [
+            "nightmare",
+            "nightmare core"
+        ],
+        "health": 600,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "nightmare": {
         "alises": [
-          "nightmare 2nd phase",
-          "nightmare second phase",
-          "nightmare phase 2"
+            "nightmare 2nd phase",
+            "nightmare second phase",
+            "nightmare phase 2"
         ],
-        "health": 1200
+        "health": 1200,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "varia core": {
         "aliases": [
-          "barrier core",
-          "barrier core-x",
-          "mega core",
-          "mega core-x",
-          "varia core-x"
+            "barrier core",
+            "barrier core-x",
+            "mega core",
+            "mega core-x",
+            "varia core-x"
         ],
         "children": [
-          "varia core core-x"
+            "varia core core-x"
         ],
-        "health": 100
+        "health": 100,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "box": {
         "aliases": [
-          "b.o.x.",
-          "box 1"
+            "b.o.x.",
+            "box 1"
         ],
-        "health": 300
+        "health": 300,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "xbox": {
         "aliases": [
-          "x-b.o.x.",
-          "box 2"
+            "x-b.o.x.",
+            "box 2"
         ],
         "children": [
-          "wave core"
+            "wave core"
         ],
-        "health": 500
+        "health": 500,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "arachnus core": {
         "aliases": [
-          "arachnus core-x",
-          "marukara core",
-          "marukara core-x"
+            "arachnus core-x",
+            "marukara core",
+            "marukara core-x"
         ],
-        "health": 30
+        "health": 30,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "charge core": {
         "aliases": [
-          "charge core-x",
-          "charge beam core-x",
-          "charge beam core",
-          "fake chozo statue"
+            "charge core-x",
+            "charge beam core-x",
+            "charge beam core",
+            "fake chozo statue"
         ],
-        "health": 33
+        "health": 33,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "gadora": {
         "aliases": [
-          "eyedoor",
-          "eye door"
+            "eyedoor",
+            "eye door"
         ],
-        "health": 24
+        "health": 24,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 1.0
+        }
     },
     "ice core": {
         "aliases": [
-          "ice core-x",
-          "ice beam core",
-          "ice beam core-x",
-          "sax core",
-          "sax core-x",
-          "sa-x core",
-          "sa-x core-x"
+            "ice core-x",
+            "ice beam core",
+            "ice beam core-x",
+            "sax core",
+            "sax core-x",
+            "sa-x core",
+            "sa-x core-x"
         ],
-        "health": 270
+        "health": 270,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "plasma core": {
         "aliases": [
-          "plasma core-x",
-          "plasma beam core",
-          "plasma beam core-x",
-          "nettori core",
-          "nettori core-x",
-          "plant boss core",
-          "plant boss core-x",
-          "chozo statue core",
-          "chozo statue core-x"
+            "plasma core-x",
+            "plasma beam core",
+            "plasma beam core-x",
+            "nettori core",
+            "nettori core-x",
+            "plant boss core",
+            "plant boss core-x",
+            "chozo statue core",
+            "chozo statue core-x"
         ],
-        "health": 200
+        "health": 200,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "wave core": {
         "aliases": [
-          "wave core-x",
-          "wave beam core",
-          "wave beam core-x",
-          "xbox core",
-          "xbox core-x",
-          "box 2 core",
-          "box 2 core-x"
+            "wave core-x",
+            "wave beam core",
+            "wave beam core-x",
+            "xbox core",
+            "xbox core-x",
+            "box 2 core",
+            "box 2 core-x"
         ],
-        "health": 180
+        "health": 180,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "zazabi core": {
         "aliases": [
-          "zazabi core-x",
-          "hj core",
-          "hj core-x",
-          "hijump core",
-          "hijump core-x",
-          "hi-jump core",
-          "hi-jump core-x",
-          "highjump core",
-          "highjump core-x",
-          "high jump core",
-          "high jump core-x"
+            "zazabi core-x",
+            "hj core",
+            "hj core-x",
+            "hijump core",
+            "hijump core-x",
+            "hi-jump core",
+            "hi-jump core-x",
+            "highjump core",
+            "highjump core-x",
+            "high jump core",
+            "high jump core-x"
         ],
-        "health": 40
+        "health": 40,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "serris core": {
         "aliases": [
-          "serris core-x",
-          "ishtar core",
-          "ishtar core-x",
-          "speed core",
-          "speed core-x",
-          "speedbooster core",
-          "speedbooster core-x",
-          "speed booster core",
-          "speed booster core-x"
+            "serris core-x",
+            "ishtar core",
+            "ishtar core-x",
+            "speed core",
+            "speed core-x",
+            "speedbooster core",
+            "speedbooster core-x",
+            "speed booster core",
+            "speed booster core-x"
         ],
-        "health": 50
+        "health": 50,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "wide core": {
         "aliases": [
-          "wide core-x",
-          "wide beam core",
-          "wide beam core-x",
-          "scientist",
-          "scientist core",
-          "scientist core-x",
-          "gary",
-          "gary core",
-          "gary core-x"
+            "wide core-x",
+            "wide beam core",
+            "wide beam core-x",
+            "scientist",
+            "scientist core",
+            "scientist core-x",
+            "gary",
+            "gary core",
+            "gary core-x"
         ],
-        "health": 160
+        "health": 160,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "yakuza core": {
         "aliases": [
-          "yakuza core-x",
-          "spider core",
-          "spider core-x",
-          "gedo core",
-          "gedo core-x",
-          "sj core",
-          "sj core-x",
-          "space jump core",
-          "space jump core-x"
+            "yakuza core-x",
+            "spider core",
+            "spider core-x",
+            "gedo core",
+            "gedo core-x",
+            "sj core",
+            "sj core-x",
+            "space jump core",
+            "space jump core-x"
         ],
-        "health": 240
+        "health": 240,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "varia core core-x": {
         "aliases": [
-          "varia core core",
-          "varia core-x core",
-          "varia core-x core-x",
-          "barrier core core",
-          "barrier core core-x",
-          "barrier core-x core",
-          "barrier core-x core-x",
-          "mega core core",
-          "mega core core-x",
-          "mega core-x core",
-          "mega core-x core-x",
-          "varia suit core",
-          "varia suit core-x"
+            "varia core core",
+            "varia core-x core",
+            "varia core-x core-x",
+            "barrier core core",
+            "barrier core core-x",
+            "barrier core-x core",
+            "barrier core-x core-x",
+            "mega core core",
+            "mega core core-x",
+            "mega core-x core",
+            "mega core-x core-x",
+            "varia suit core",
+            "varia suit core-x"
         ],
-        "health": 180
+        "health": 180,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "nightmare core": {
         "aliases": [
-          "nightmare core-x"
+            "nightmare core-x"
         ],
-        "health": 240
+        "health": 240,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "ridley core": {
         "aliases": [
-          "ridley core-x",
-          "screw core",
-          "screw core-x",
-          "sa core",
-          "sa core-x",
-          "screw attack core",
-          "screw attacck ore-x"
+            "ridley core-x",
+            "screw core",
+            "screw core-x",
+            "sa core",
+            "sa core-x",
+            "screw attack core",
+            "screw attacck ore-x"
         ],
-        "health": 270
+        "health": 270,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.0,
+            "red": 0.0
+        }
     },
     "energy tank mimic": {
         "aliases": [
-          "e mimic",
-          "energy tank mimic",
-          "etank mimic",
-          "e-tank mimic"
+            "e mimic",
+            "energy tank mimic",
+            "etank mimic",
+            "e-tank mimic"
         ],
-        "health": 1
+        "health": 1,
+        "x_chances": {
+            "yellow": 0.9766,
+            "green": 0.0,
+            "red": 0.0234
+        }
     },
     "missile tank mimic": {
         "aliases": [
-          "missile mimic"
+            "missile mimic"
         ],
-        "health": 1
+        "health": 1,
+        "x_chances": {
+            "yellow": 0.0,
+            "green": 0.9766,
+            "red": 0.0234
+        }
     }
 }

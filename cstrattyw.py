@@ -503,6 +503,8 @@ def run_bot(discord_token: str):
             additional_desc = f" {enemy_info["description"]}" if "description" in enemy_info else ""
             message += f"{enemy_name.title()} has {str(enemy_info["health"])} health.{additional_desc}\n"
 
+        if not message:
+            message = f"Enemy `{enemy_name}` not found!"
         await ctx.send(message)
 
     @client.command(ignore_extra=False)
@@ -519,3 +521,4 @@ def run_bot(discord_token: str):
         await ctx.send(f"{ctx.message.author.mention} y{"o" * 11}")
 
     client.run(discord_token)
+
